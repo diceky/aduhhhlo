@@ -1,0 +1,36 @@
+{
+  "displayName": "SocketIO Receiver",
+  "defaultWidth": 160,
+  "defaultHeight": 100,
+  "components": "./index.js",
+  "icon": "./thumbnail.png",
+  "props": [
+    {
+      "name": "color",
+      "displayName": "Color",
+      "type": "color",
+      "default": "#014653"
+    },
+    {
+      "name": "serverUrl",
+      "displayName": "Server URL",
+      "type": "text"
+    },
+    {
+      "name": "namespace",
+      "displayName": "Server Namespace",
+      "type": "text"
+    },
+    {
+      "name": "room",
+      "displayName": "Room",
+      "type": "text"
+    },
+    {
+      "name": "databaseValue",
+      "displayName": "Database property to link",
+      "type": "number",
+      "role": "autosaveInput"
+    }
+  ]
+}

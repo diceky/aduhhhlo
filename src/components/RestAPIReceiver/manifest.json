@@ -1,0 +1,36 @@
+{
+  "displayName": "REST API Receiver",
+  "defaultWidth": 160,
+  "defaultHeight": 100,
+  "components": "./index.js",
+  "icon": "./thumbnail.png",
+  "props": [
+    {
+      "name": "color",
+      "displayName": "Color",
+      "type": "color",
+      "default": "#014653"
+    },
+    {
+      "name": "url",
+      "displayName": "URL",
+      "type": "text"
+    },
+    {
+      "name": "headers",
+      "displayName": "Headers",
+      "type": "text"
+    },
+    {
+      "name": "method",
+      "displayName": "Method (GET or POST)",
+      "type": "text"
+    },
+    {
+      "name": "databaseValue",
+      "displayName": "Database property to link",
+      "type": "number",
+      "role": "autosaveInput"
+    }
+  ]
+}

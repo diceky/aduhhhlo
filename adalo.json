@@ -1,0 +1,16 @@
+{
+  "displayName": "aduhhhlo",
+  "components": [
+    {
+      "name": "SocketIOReceiver",
+      "manifest": "./src/components/SocketIOReceiver/manifest.json"
+    },
+    {
+      "name": "RestAPIReceiver",
+      "manifest": "./src/components/RestAPIReceiver/manifest.json"
+    }
+  ],
+  "author": "Dice Yukita",
+  "description": "Custom components for duhhh School",
+  "logo": "./logo.png"
+}
