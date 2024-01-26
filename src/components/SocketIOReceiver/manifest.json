@@ -17,11 +17,6 @@
       "type": "text"
     },
     {
-      "name": "namespace",
-      "displayName": "Server Namespace",
-      "type": "text"
-    },
-    {
       "name": "room",
       "displayName": "Room",
       "type": "text"

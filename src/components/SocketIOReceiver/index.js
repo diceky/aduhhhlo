@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { io } from 'socket.io-client';
 
-const SocketIOReceiver = ({ color, serverUrl, namespace, room, databaseValue}) => {
+const SocketIOReceiver = ({ color, serverUrl, room, databaseValue}) => {
 	const [message, setMessage] = useState({});
 
 	useEffect(() => {
@@ -10,8 +10,8 @@ const SocketIOReceiver = ({ color, serverUrl, namespace, room, databaseValue}) =
 
 			// Creates a WebSocket connection
 			const socket = io(serverUrl, {
-				query: { 
-					"roomId": room },
+				auth: { 
+					"room": room },
 			  });
 
 			socket.on("connect", () => {
@@ -19,9 +19,9 @@ const SocketIOReceiver = ({ color, serverUrl, namespace, room, databaseValue}) =
 			});
 
 			// Listens for incoming messages
-			socket.on("new_mood", (value) => {
+			socket.on("response", (value) => {
 				setMessage(value);
-				databaseValue.onChange(value.content.body); //save mood slider value to Adalo database
+				databaseValue.onChange(value.content.knob1); //save duhhh device sensor value to Adalo database
 			});
 
 			// Destroys the socket reference
